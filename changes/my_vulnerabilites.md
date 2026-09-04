@@ -26,13 +26,13 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ## Apache Struts
 
-**Ports:** 8282 (HTTP)
+**Ports:** 7979 (HTTP)
 
-**Credentials:** Apache Tomcat Web Application Manager — U: sploit / P: sploit
+**Credentials:** Apache Tomcat Web Application Manager — U: najboljsiHrib / P: Lisca
 
 **Access:**
-- Vulnerable app: `http://localhost:8282/struts2-rest-showcase`
-- Tomcat Manager: `http://localhost:8282`
+- Vulnerable app: `http://localhost:7979/struts2-rest-showcase`
+- Tomcat Manager: `http://localhost:7979`
 
 **Start/Stop:**
 - `services.msc` → Apache Tomcat 8.0 Tomcat8 service (Stop/Start)
@@ -46,11 +46,11 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ## Tomcat
 
-**Ports:** 8282 (HTTP)
+**Ports:** 7979 (HTTP)
 
-**Credentials:** U: sploit / P: sploit
+**Credentials:** U: najboljsiHrib / P: Lisca
 
-**Access:** `http://localhost:8282`
+**Access:** `http://localhost:7979`
 
 **Start/Stop:**
 - `services.msc` → Apache Tomcat 8.0 Tomcat8 service
@@ -226,11 +226,11 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ## Apache Axis2
 
-**Ports:** 8282 (HTTP)
+**Ports:** 7979 (HTTP)
 
 **Credentials:** None needed
 
-**Access:** `http://localhost:8282/axis2`
+**Access:** `http://localhost:7979/axis2`
 
 **Start/Stop:** Via Apache Tomcat application manager
 
