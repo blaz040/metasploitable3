@@ -6,11 +6,11 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ## GlassFish
 
-**Ports:** 4848 (HTTP), 8080 (HTTP), 8181 (HTTPS)
+**Ports:** 4884 (HTTP), 8989 (HTTP), 9898 (HTTPS)
 
-**Credentials:** admin / sploit
+**Credentials:** cupcake / ch0col4t3_fl@vor_with_van!lla
 
-**Access:** `http://localhost:4848`, login with above credentials.
+**Access:** `http://localhost:4884`, login with above credentials.
 
 **Start/Stop:**
 - Stop: Task Manager → kill `java.exe` (glassfish process)
