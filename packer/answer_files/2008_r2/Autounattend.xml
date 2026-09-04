@@ -95,7 +95,7 @@
                         </Password>
                         <Description>Vagrant User</Description>
                         <DisplayName>vagrant</DisplayName>
-                        <Group>administrators</Group>
+                        <!-- <Group>administrators</Group> -->
                         <Name>vagrant</Name>
                     </LocalAccount>
                 </LocalAccounts>

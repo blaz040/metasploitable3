@@ -1,3 +1,5 @@
+:: Needs to update certs because the OS wont update itself this is needed and 
+:: not a security risk
 cmd /c certutil -addstore -f "Root" A:\addtrust_external_ca.cer
 cmd /c certutil -addstore -f "Root" A:\baltimore_ca.cer
 cmd /c certutil -addstore -f "Root" A:\digicert.cer
