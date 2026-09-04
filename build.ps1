@@ -6,7 +6,7 @@ $vagrantMinVersion = "1.9.0"
 $vagrantreloadMinVersion = "0.0.1"
 $packer = "packer.exe"
 $expectedVBoxLocation = "C:\Program Files\Oracle\VirtualBox"
-$expectedVagrantLocation="C:\HashiCorp\Vagrant\bin"
+$expectedVagrantLocation="C:\Program Files\Vagrant\bin"
 
 
 
@@ -64,6 +64,7 @@ If (CompareVersions -actualVersion $vboxVersion -expectedVersion $virtualBoxMinV
 }
 
 $packerVersion = cmd.exe /c $packer -v
+$packerVersion = $packerVersion -replace '[^0-9.]', ''  # strips "Packer v" and any trailing text
 
 If (CompareVersions -actualVersion $packerVersion -expectedVersion $packerMinVersion) {
 
@@ -149,7 +150,7 @@ function InstallBox($os_full, $os_short)
     
     } else {
 
-        cmd.exe /c $packer build --only=virtualbox-iso packer\templates\$os_full.json
+        cmd.exe /c $packer build -force --only=virtualbox-iso packer\templates\$os_full.json
 
         if($?) {
           Write-Host "Box successfully built by Packer."
