@@ -24,9 +24,13 @@ Vagrant.configure("2") do |config|
     win2k8.vm.communicator = "winrm"
     win2k8.winrm.retry_limit = 60
     win2k8.winrm.retry_delay = 10
+    win2k8.winrm.port = 5988
+    win2k8.winrm.guest_port = 5988
 
-    win2k8.vm.network "private_network", type: "dhcp"
-
+    # win2k8.vm.network "private_network", type: "dhcp"
+    win2k8.vm.network :forwarded_port, guest: 5988, host: 5988,
+      id: "winrm",
+      auto_correct: false
     win2k8.vm.provider "libvirt" do |v|
       v.memory = 8192
       v.cpus = 12

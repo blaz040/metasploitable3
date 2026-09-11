@@ -66,12 +66,12 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## Jenkins ❓
-**Ports:** 8484 (HTTP)
+## Jenkins ❓<< check if the port is also changed >> << check again>>
+**Ports:** 8768 (HTTP)
 
 **Credentials:** None enabled by default
 
-**Access:** `http://localhost:8484`
+**Access:** `http://localhost:8768`
 
 **Start/Stop:**
 - `services.msc` → jinkies service
@@ -82,9 +82,9 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## IIS - FTP 
+## IIS - FTP ✅
 
-**Ports:** 21 (FTP)
+**Ports:** 6079 (FTP)
 
 **Credentials:** Windows credentials
 
@@ -99,7 +99,7 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## IIS - HTTP
+## IIS - HTTP << Removed this >> ❌
 
 **Ports:** 80 (HTTP)
 
@@ -117,7 +117,7 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## psexec
+## psexec ✅
 
 **Ports:** 445 (SMB), 139 (NetBIOS)
 
@@ -135,7 +135,7 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## SSH❓
+## SSH ✅
 
 **Ports:** 2222 (SSH)
 
@@ -149,9 +149,9 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## WinRM ❓
+## WinRM ✅
 
-**Ports:** 5986 (HTTPS)
+**Ports:** 5988 (HTTPS)
 
 **Credentials:** Any credentials valid for Metasploitable3 (see Configuration page)
 
@@ -169,7 +169,7 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## Chinese Caidao
+## Chinese Caidao ✅
 
 **Ports:** 80 (HTTP)
 
@@ -185,13 +185,13 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## ManageEngine ❓ (changed port)
+## ManageEngine ❓ (changed port) ❌
 
 **Ports:** 8010 (HTTP)
 
 **Credentials:** admin / admin
 
-**Access:** `http://localhost:8020`
+**Access:** `http://localhost:8010`
 
 **Start/Stop:**
 - Stop: `net stop "ManageEngine Desktop Central Server"`
@@ -204,7 +204,7 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## ElasticSearch
+## ElasticSearch ❓
 
 **Ports:** 9200 (HTTP)
 
@@ -240,9 +240,9 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## WebDAV
+## WebDAV ✅
 
-**Ports:** 8585 (HTTP)
+**Ports:** 7575 (HTTP)
 
 **Credentials:** None needed
 
@@ -257,7 +257,7 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## SNMP
+## SNMP << cant change file but is usefull for getting all users and getting all service / open ports >>  ✅
 
 **Ports:** 161 (UDP)
 
@@ -274,13 +274,13 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## MySQL
+## MySQL ✅
 
-**Ports:** 3306 (TCP)
+**Ports:** 3360 (TCP)
 
 **Credentials:** U: root / P: (blank)
 
-**Access:** MySQL client → port 3306
+**Access:** MySQL client → port 3360
 
 **Start/Stop:**
 - Stop: `net stop wampmysql`
@@ -291,9 +291,9 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## JMX
+## JMX << needs to check the new port 1666 from 1617 >>
 
-**Ports:** 1617 (TCP)
+**Ports:** 1666 (TCP)
 
 **Credentials:** None needed
 
@@ -310,13 +310,13 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## WordPress
+## WordPress ❓<< need to change the website. Currently tried to change all in sql database from emtasploitable to exploitable but the site crashed. I only wanted to change the text of the website >>
 
-**Ports:** 8585 (HTTP)
+**Ports:** 7575 (HTTP)
 
 **Credentials:** None needed
 
-**Access:** `http://localhost:8585/wordpress`
+**Access:** `http://localhost:7575/wordpress`
 
 **Start/Stop:**
 - Stop: `net stop wampapache`
@@ -329,9 +329,9 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## Remote Desktop
+## Remote Desktop ✅
 
-**Ports:** 3389 (RDP)
+**Ports:** 3839 (RDP)
 
 **Credentials:** Any Windows credentials
 
@@ -345,13 +345,13 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## PHPMyAdmin
+## PHPMyAdmin << check if the phpmyadmin works now/ is accessable changed the mysql port accordingly >> ❓
 
-**Ports:** 8585 (HTTP)
+**Ports:** 7575 (HTTP)
 
 **Credentials:** U: root / P: (blank)
 
-**Access:** `http://localhost:8585/phpmyadmin`
+**Access:** `http://localhost:7575/phpmyadmin`
 
 **Start/Stop:**
 - Stop: `net stop wampapache`
@@ -364,8 +364,8 @@ Source: https://github.com/rapid7/metasploitable3/wiki/Vulnerabilities
 
 ---
 
-## Ruby on Rails
-
+## Ruby on Rails UNSUPPORTED on win2k8 ❌
+ 
 **Ports:** 3000 (HTTP)
 
 **Credentials:** N/A

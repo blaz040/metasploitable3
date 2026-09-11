@@ -1,5 +1,79 @@
 {
   "builders": [
+      {
+      "type": "proxmox-iso",
+      "proxmox_url": "{{user `proxmox_url`}}",
+      "username": "{{user `proxmox_username`}}",
+      "token": "{{user `proxmox_token`}}",
+      "insecure_skip_tls_verify": true,
+
+      "node": "{{user `proxmox_node`}}",
+      "vm_name": "metasploitable3-win2k8",
+      "vm_id": "{{user `proxmox_vmid`}}",
+
+      "iso_url": "{{user `iso_url`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_storage_pool": "local",
+      "unmount_iso": true,
+
+      "os": "win",
+      "cores": 8,
+      "sockets": 1,
+      "memory": 4096,
+
+      "scsi_controller": "lsi",
+      "disks": [
+        {
+          "disk_size": "60G",
+          "storage_pool": "local-lvm",
+          "type": "scsi"
+        }
+      ],
+
+      "network_adapters": [
+        {
+          "model": "e1000",
+          "bridge": "net1"
+        }
+      ],
+
+      "additional_iso_files": [
+        {
+          "type": "sata",
+          "iso_storage_pool": "local",
+          "unmount": true,
+          "cd_files": [
+            "{{user `autounattend`}}",
+            "{{user `scripts_dir`}}/configs/microsoft-updates.bat",
+            "{{user `scripts_dir`}}/configs/win-updates.ps1",
+            "{{user `scripts_dir`}}/installs/openssh.ps1",
+            "{{user `resources_dir`}}/certs/oracle-cert.cer",
+            "{{user `resources_dir`}}/certs/gdig2.crt",
+            "{{user `resources_dir`}}/certs/comodorsadomainvalidationsecureserverca.crt",
+            "{{user `resources_dir`}}/certs/comodorsacertificationauthority.crt",
+            "{{user `resources_dir`}}/certs/addtrust_external_ca.cer",
+            "{{user `resources_dir`}}/certs/baltimore_ca.cer",
+            "{{user `resources_dir`}}/certs/digicert.cer",
+            "{{user `resources_dir`}}/certs/equifax.cer",
+            "{{user `resources_dir`}}/certs/globalsign.cer",
+            "{{user `resources_dir`}}/certs/gte_cybertrust.cer",
+            "{{user `resources_dir`}}/certs/microsoft_root_2011.cer",
+            "{{user `resources_dir`}}/certs/thawte_primary_root.cer",
+            "{{user `resources_dir`}}/certs/utn-userfirst.cer"
+          ],
+          "cd_label": "cidata"
+        }
+      ],
+
+      "boot_wait": "10m",
+      "communicator": "ssh",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "2h",
+      "ssh_port": 2222,
+
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
+    },
     {
       "type": "parallels-iso",
       "iso_url": "{{user `iso_url`}}",
@@ -11,7 +85,7 @@
       "ssh_timeout": "2h",
       "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
-      "guest_os_type": "win-2008",
+      "guest_os_type": "w2k8",
       "parallels_tools_flavor": "win",
       "disk_size": 61440,
       "floppy_files": [
@@ -218,7 +292,9 @@
       ]
     },
     {
-      "type": "windows-restart"
+     "type": "windows-restart",
+     "restart_timeout": "1m",
+     "pause_before": "2m"
     },
     {
       "type": "powershell",
@@ -278,9 +354,6 @@
       "type": "windows-restart",
       "pause_before": "180s",
       "restart_timeout": "15m"
-    },
-    {
-      "type": "windows-restart"
     },
     {
       "type": "windows-shell",
@@ -389,5 +462,6 @@
     "scripts_dir": "{{template_dir}}/../../scripts",
     "resources_dir": "{{template_dir}}/../../resources",
     "box_version": "0.1.1"
+
   }
 }

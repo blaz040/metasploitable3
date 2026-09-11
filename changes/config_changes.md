@@ -40,3 +40,6 @@
 
 # My King announcment service
 The service will not crash 
+
+✅ = 13 services
+❓ = 5 services
