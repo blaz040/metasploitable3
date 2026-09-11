@@ -3,7 +3,7 @@ netsh advfirewall firewall add rule name="Open Port 7979 for Apache Struts" dir=
 netsh advfirewall firewall add rule name="Open Port 80 for IIS" dir=in action=allow protocol=TCP localport=80
 netsh advfirewall firewall add rule name="Open Port 4884 for GlassFish" dir=in action=allow protocol=TCP localport=4884
 netsh advfirewall firewall add rule name="Open Port 8989 for GlassFish" dir=in action=allow protocol=TCP localport=8989
-netsh advfirewall firewall add rule name="Open Port 8585 for Wordpress and phpMyAdmin" dir=in action=allow protocol=TCP localport=8585
+netsh advfirewall firewall add rule name="Open Port 7575 for Wordpress and phpMyAdmin" dir=in action=allow protocol=TCP localport=7575
 netsh advfirewall firewall add rule name="Java 1.6 java.exe" dir=in action=allow program="C:\openjdk6\openjdk-1.6.0-unofficial-b28-windows-amd64-installer\jre\bin\java.exe" enable=yes
 netsh advfirewall firewall add rule name="Open Port 3000 for Rails Server" dir=in action=allow protocol=TCP localport=3000
 netsh advfirewall firewall add rule name="Open Port 8010 for ManageEngine Desktop Central" dir=in action=allow protocol=TCP localport=8010
