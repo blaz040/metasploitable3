@@ -8,7 +8,7 @@ net user leesin_kick insec1ck7 /ADD
 net user reyna_dismiss s0ulorb3x /ADD
 net user infernus_flame burn1tdwn5 /ADD
 net user vindicta_hawk sn1perowl2 /ADD
-net user lash_whip gr4ppl3pull/ADD
+net user lash_whip gr4ppl3pull /ADD
 net user haze_smoke sm0kescreen7 /ADD
 net user abrams_bear Ch4rgeclaw9 /ADD
 net user paradox_time l00preset3 /ADD
