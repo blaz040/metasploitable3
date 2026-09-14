@@ -1,6 +1,6 @@
 {
   "builders": [
-      {
+    {
       "type": "proxmox-iso",
       "proxmox_url": "{{user `proxmox_url`}}",
       "username": "{{user `proxmox_username`}}",
@@ -11,12 +11,10 @@
       "vm_name": "metasploitable3-win2k8",
       "vm_id": "{{user `proxmox_vmid`}}",
 
-      "iso_url": "{{user `iso_url`}}",
-      "iso_checksum": "{{user `iso_checksum`}}",
-      "iso_storage_pool": "local",
+      "iso_file": "local:iso/win2k8.iso",
       "unmount_iso": true,
 
-      "os": "win",
+      "os": "w2k8",
       "cores": 8,
       "sockets": 1,
       "memory": 4096,
@@ -25,8 +23,8 @@
       "disks": [
         {
           "disk_size": "60G",
-          "storage_pool": "local-lvm",
-          "type": "scsi"
+          "storage_pool": "lvm-thin-pool-Storage",
+          "type": "ide"
         }
       ],
 
@@ -70,9 +68,7 @@
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "2h",
-      "ssh_port": 2222,
-
-      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
+      "ssh_port": 2222
     },
     {
       "type": "parallels-iso",

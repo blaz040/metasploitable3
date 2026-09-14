@@ -1,0 +1,31 @@
+Warning: Warning when preparing build: "proxmox-iso"
+
+'iso_file' is deprecated and will be removed in a future release, define the
+boot iso options in a 'boot_iso' block
+
+Warning: Warning when preparing build: "proxmox-iso"
+
+'unmount_iso' is deprecated and will be removed in a future release, define the
+boot iso options in a 'boot_iso' block
+
+
+[1;32mproxmox-iso: output will be in this color.[0m
+
+[1;32m==> proxmox-iso: Creating CD disk...[0m
+[1;32m==> proxmox-iso: xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.[0m
+[1;32m==> proxmox-iso: Drive current: -outdev 'stdio:/tmp/packer3393650935.iso'[0m
+[1;32m==> proxmox-iso: Media current: stdio file, overwriteable[0m
+[1;32m==> proxmox-iso: Media status : is blank[0m
+[1;32m==> proxmox-iso: Media summary: 0 sessions, 0 data blocks, 0 data, 15.1g free[0m
+[1;32m==> proxmox-iso: xorriso : WARNING : -volid text does not comply to ISO 9660 / ECMA 119 rules[0m
+[1;32m==> proxmox-iso: Added to ISO image: directory '/'='/tmp/packer_to_cdrom689755444'[0m
+[1;32m==> proxmox-iso: xorriso : UPDATE :      17 files added in 1 seconds[0m
+[1;32m==> proxmox-iso: xorriso : UPDATE :      17 files added in 1 seconds[0m
+[1;32m==> proxmox-iso: ISO image produced: 217 sectors[0m
+[1;32m==> proxmox-iso: Written to medium : 217 sectors at LBA 0[0m
+[1;32m==> proxmox-iso: Writing to 'stdio:/tmp/packer3393650935.iso' completed successfully.[0m
+[1;32m==> proxmox-iso: Done copying paths from CD_dirs[0m
+[1;32m==> proxmox-iso: Uploaded ISO to local:iso/packer3393650935.iso[0m
+[1;32m==> proxmox-iso: Creating VM[0m
+[1;32m==> proxmox-iso: Starting VM[0m
+[1;32m==> proxmox-iso: Waiting for SSH to become available...[0m
