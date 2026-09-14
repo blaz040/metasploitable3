@@ -79,7 +79,7 @@ Invoke-CLR4PowerShellCommand -ScriptBlock {
         }
 
         "virtualbox-iso" {
-            $vboxIsoUser = 'C:\Users\vagrant\VBoxGuestAdditions.iso'
+            $vboxIsoUser = 'C:\Users\king\VBoxGuestAdditions.iso'
             $vboxIsoTemp = 'C:\Windows\Temp\VBoxGuestAdditions.iso'
 
             if (Test-Path $vboxIsoUser) {
@@ -98,7 +98,7 @@ Invoke-CLR4PowerShellCommand -ScriptBlock {
         }
 
         "parallels-iso" {
-            $prlIsoUser = 'C:\Users\vagrant\prl-tools-win.iso'
+            $prlIsoUser = 'C:\Users\king\prl-tools-win.iso'
             $prlIsoTemp = 'C:\Windows\Temp\prl-tools-win.iso'
             $prlExtractDir = 'C:\Windows\Temp\parallels'
 

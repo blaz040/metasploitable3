@@ -1,1 +1,1 @@
-rmdir /S /Q C:\vagrant
+rmdir /S /Q C:\king

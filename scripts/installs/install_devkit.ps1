@@ -64,7 +64,7 @@ Invoke-CLR4PowerShellCommand -ScriptBlock {
     }
 
     # 4. Copy custom dk.rb configuration script
-    Copy-Item -Path 'C:\Vagrant\resources\Rails_Server\devkit\dk.rb' -Destination $devkitDir -Force
+    Copy-Item -Path 'C:\king\resources\Rails_Server\devkit\dk.rb' -Destination $devkitDir -Force
 
     # 5. Initialize & Install DevKit via Ruby
     $rubyExe = 'C:\tools\ruby23\bin\ruby.exe'

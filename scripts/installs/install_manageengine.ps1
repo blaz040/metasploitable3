@@ -47,7 +47,7 @@ Invoke-CLR4PowerShellCommand -ScriptBlock {
     # Paths
     $exeUrl  = 'https://metasploitable-binaries.s3.amazonaws.com/metasploitable3/ManageEngine_DesktopCentral.exe'
     $exePath = 'C:\Windows\Temp\ManageEngine_DesktopCentral.exe'
-    $issPath = 'C:\Vagrant\resources\manageengine\setup.iss'
+    $issPath = 'C:\king\resources\manageengine\setup.iss'
 
     # 2. Download ManageEngine Executable
     (New-Object System.Net.WebClient).DownloadFile($exeUrl, $exePath)

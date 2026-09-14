@@ -19,12 +19,12 @@ if (!(Test-Path "C:\Program Files\OpenSSH\bin\ssh.exe")) {
 
 Stop-Service "OpenSSHd" -Force
 
-# ensure vagrant can log in
-Write-Output "Setting vagrant user file permissions"
-New-Item -ItemType Directory -Force -Path "C:\Users\vagrant\.ssh"
-C:\Windows\System32\icacls.exe "C:\Users\vagrant" /grant "vagrant:(OI)(CI)F"
-C:\Windows\System32\icacls.exe "C:\Program Files\OpenSSH\bin" /grant "vagrant:(OI)RX"
-C:\Windows\System32\icacls.exe "C:\Program Files\OpenSSH\usr\sbin" /grant "vagrant:(OI)RX"
+# ensure king can log in
+Write-Output "Setting king user file permissions"
+New-Item -ItemType Directory -Force -Path "C:\Users\king\.ssh"
+C:\Windows\System32\icacls.exe "C:\Users\king" /grant "king:(OI)(CI)F"
+C:\Windows\System32\icacls.exe "C:\Program Files\OpenSSH\bin" /grant "king:(OI)RX"
+C:\Windows\System32\icacls.exe "C:\Program Files\OpenSSH\usr\sbin" /grant "king:(OI)RX"
 
 Write-Output "Setting SSH home directories"
     (Get-Content "C:\Program Files\OpenSSH\etc\passwd") |
@@ -49,7 +49,7 @@ $sshd_config = $sshd_config -replace 'Banner /etc/banner.txt', '#Banner /etc/ban
 # next time OpenSSH starts have it listen on the proper port
 Set-Content "C:\Program Files\OpenSSH\etc\sshd_config" $sshd_config
 
-Write-Output "Removing ed25519 key as Vagrant net-ssh 2.9.1 does not support it"
+Write-Output "Removing ed25519 key as king net-ssh 2.9.1 does not support it"
 Remove-Item -Force -ErrorAction SilentlyContinue "C:\Program Files\OpenSSH\etc\ssh_host_ed25519_key"
 Remove-Item -Force -ErrorAction SilentlyContinue "C:\Program Files\OpenSSH\etc\ssh_host_ed25519_key.pub"
 
@@ -57,7 +57,7 @@ Remove-Item -Force -ErrorAction SilentlyContinue "C:\Program Files\OpenSSH\etc\s
 Write-Output "Setting temp directory location"
 Remove-Item -Recurse -Force -ErrorAction SilentlyContinue "C:\Program Files\OpenSSH\tmp"
 C:\Program` Files\OpenSSH\bin\junction.exe /accepteula "C:\Program Files\OpenSSH\tmp" "C:\Windows\Temp"
-C:\Windows\System32\icacls.exe "C:\Windows\Temp" /grant "vagrant:(OI)(CI)F"
+C:\Windows\System32\icacls.exe "C:\Windows\Temp" /grant "king:(OI)(CI)F"
 
 # add 64 bit environment variables missing from SSH
 Write-Output "Setting SSH environment"
@@ -69,7 +69,7 @@ if ($is_64bit) {
         "CommonProgramW6432=C:\Program Files\Common Files"
     $sshenv = $sshenv + "`r`n" + ($env_vars -join "`r`n")
 }
-Set-Content C:\Users\vagrant\.ssh\environment $sshenv
+Set-Content C:\Users\king\.ssh\environment $sshenv
 
 # record the path for provisioners (without the newline)
 Write-Output "Recording PATH for provisioners"

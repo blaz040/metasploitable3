@@ -65,8 +65,8 @@
 
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
       "ssh_port": 2222
     },
@@ -76,9 +76,9 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
-      "ssh_timeout": "2h",
+      "ssh_username": "king",
+      "ssh_password": "king",
+      "ssh_timeout": "10m",
       "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "w2k8",
@@ -104,7 +104,7 @@
         "{{user `resources_dir`}}/certs/utn-userfirst.cer"
       ],
       "vm_name": "metasploitable3-win2k8",
-      "cpus": 12,
+      "cpus": 4,
       "memory": 4096
     },
     {
@@ -114,8 +114,8 @@
       "headless": false,
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
       "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
@@ -155,8 +155,8 @@
       "headless": false,
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
       "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
@@ -205,8 +205,8 @@
       "boot_wait": "10m",
       "communicator": "ssh",
       "accelerator": "kvm",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
       "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
@@ -263,12 +263,12 @@
     {
       "type": "file",
       "source": "{{user `scripts_dir`}}",
-      "destination": "C:/vagrant"
+      "destination": "C:/king"
     },
     {
       "type": "file",
       "source": "{{user `resources_dir`}}",
-      "destination": "C:/vagrant"
+      "destination": "C:/king"
     },
     {
       "type": "shell",
@@ -325,7 +325,7 @@
     {
       "type": "powershell",
       "elevated_user": "Administrator",
-      "elevated_password": "vagrant",
+      "elevated_password": "king",
       "scripts": [
         "{{user `scripts_dir`}}/installs/setup_iis.bat",
         "{{user `scripts_dir`}}/installs/setup_snmp.bat"

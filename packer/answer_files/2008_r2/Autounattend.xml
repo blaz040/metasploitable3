@@ -36,8 +36,8 @@
             </DiskConfiguration>
             <UserData>
                 <AcceptEula>true</AcceptEula>
-                <FullName>Vagrant Administrator</FullName>
-                <Organization>Vagrant Inc.</Organization>
+                <FullName>king Administrator</FullName>
+                <Organization>kingOfTheHill Inc.</Organization>
                 <!-- Product Key from http://technet.microsoft.com/en-us/library/jj612867.aspx -->
                 <ProductKey>
                     <!-- Do not uncomment the Key element if you are using trial ISOs -->
@@ -84,19 +84,19 @@
         <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
             <UserAccounts>
                 <AdministratorPassword>
-                    <Value>vagrant</Value>
+                    <Value>king</Value>
                     <PlainText>true</PlainText>
                 </AdministratorPassword>
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">
                         <Password>
-                            <Value>vagrant</Value>
+                            <Value>king</Value>
                             <PlainText>true</PlainText>
                         </Password>
-                        <Description>Vagrant User</Description>
-                        <DisplayName>vagrant</DisplayName>
+                        <Description>king User</Description>
+                        <DisplayName>king</DisplayName>
                         <Group>administrators</Group>
-                        <Name>vagrant</Name>
+                        <Name>king</Name>
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
@@ -107,10 +107,10 @@
             </OOBE>
             <AutoLogon>
                 <Password>
-                    <Value>vagrant</Value>
+                    <Value>king</Value>
                     <PlainText>true</PlainText>
                 </Password>
-                <Username>vagrant</Username>
+                <Username>king</Username>
                 <Enabled>true</Enabled>
             </AutoLogon>
             <FirstLogonCommands>
@@ -258,13 +258,13 @@
                     <Description>Disable Hibernation Mode</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c wmic useraccount where "name='vagrant'" set PasswordExpires=FALSE</CommandLine>
+                    <CommandLine>cmd.exe /c wmic useraccount where "name='king'" set PasswordExpires=FALSE</CommandLine>
                     <Order>26</Order>
-                    <Description>Disable password expiration for vagrant user</Description>
+                    <Description>Disable password expiration for king user</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c mkdir -p C:\vagrant\scripts</CommandLine>
-                    <Description>Create directory for vagrant files to avoid provisioner bug with packer.</Description>
+                    <CommandLine>cmd.exe /c mkdir -p C:\king\scripts</CommandLine>
+                    <Description>Create directory for king files to avoid provisioner bug with packer.</Description>
                     <Order>27</Order>
                 </SynchronousCommand>
                  <!--WITHOUT WINDOWS UPDATES -->
@@ -298,7 +298,7 @@
                 <HelpCustomized>false</HelpCustomized>
             </OEMInformation>
             <!-- Rename computer here. -->
-            <ComputerName>vagrant-2008R2</ComputerName>
+            <ComputerName>king-2008R2</ComputerName>
             <TimeZone>Pacific Standard Time</TimeZone>
             <RegisteredOwner/>
         </component>
