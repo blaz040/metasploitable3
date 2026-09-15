@@ -88,8 +88,8 @@ else
     echo "Please download and install it from https://www.virtualbox.org/"
     echo "Virtualbox images will not be built."
 fi
-
-if compare_versions $($packer_bin -v) $min_packer_ver false; then
+packer_version=$($packer_bin -v | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+if compare_versions $packer_version $min_packer_ver false; then
     echo "Compatible version of $packer_bin was found."
 else
     packer_bin=packer

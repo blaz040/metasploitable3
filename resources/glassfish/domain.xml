@@ -139,7 +139,7 @@
             <property name="debug" value="false"></property>
           </provider-config>
           <provider-config provider-type="client" provider-id="ClientProvider" class-name="com.sun.xml.wss.provider.ClientSecurityAuthModule">
-            <request-policy auth-source="content"></request-policy>
+            <request-policy auth-source="content"></request-policy> 
             <response-policy auth-source="content"></response-policy>
             <property name="encryption.key.alias" value="s1as"></property>
             <property name="signature.key.alias" value="s1as"></property>
@@ -238,9 +238,9 @@
           </protocol>
         </protocols>
         <network-listeners>
-          <network-listener protocol="http-listener-1" port="8080" name="http-listener-1" thread-pool="http-thread-pool" transport="tcp"></network-listener>
-          <network-listener protocol="http-listener-2" port="8181" name="http-listener-2" thread-pool="http-thread-pool" transport="tcp"></network-listener>
-          <network-listener protocol="pu-protocol" port="4848" name="admin-listener" thread-pool="admin-thread-pool" transport="tcp"></network-listener>
+          <network-listener protocol="http-listener-1" port="8989" name="http-listener-1" thread-pool="http-thread-pool" transport="tcp"></network-listener>
+          <network-listener protocol="http-listener-2" port="9898" name="http-listener-2" thread-pool="http-thread-pool" transport="tcp"></network-listener>
+          <network-listener protocol="pu-protocol" port="4884" name="admin-listener" thread-pool="admin-thread-pool" transport="tcp"></network-listener>
         </network-listeners>
         <transports>
           <transport name="tcp"></transport>
@@ -441,9 +441,9 @@
         <failure-detection></failure-detection>
       </group-management-service>
       <system-property name="JMS_PROVIDER_PORT" description="Port Number that JMS Service will listen for remote clients connection." value="27676"></system-property>
-      <system-property name="ASADMIN_LISTENER_PORT" value="24848"></system-property>
-      <system-property name="HTTP_LISTENER_PORT" value="28080"></system-property>
-      <system-property name="HTTP_SSL_LISTENER_PORT" value="28181"></system-property>
+      <system-property name="ASADMIN_LISTENER_PORT" value="24884"></system-property>
+      <system-property name="HTTP_LISTENER_PORT" value="28989"></system-property>
+      <system-property name="HTTP_SSL_LISTENER_PORT" value="29898"></system-property>
       <system-property name="IIOP_LISTENER_PORT" value="23700"></system-property>
       <system-property name="IIOP_SSL_LISTENER_PORT" value="23820"></system-property>
       <system-property name="IIOP_SSL_MUTUALAUTH_PORT" value="23920"></system-property>

@@ -1,1 +1,2 @@
+:: After this runs, Windows will stop automatically logging in and will instead show the normal login screen at boot, requiring someone to manually enter credentials.
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoAdminLogon /d 0 /f

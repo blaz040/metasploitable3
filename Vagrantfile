@@ -24,12 +24,16 @@ Vagrant.configure("2") do |config|
     win2k8.vm.communicator = "winrm"
     win2k8.winrm.retry_limit = 60
     win2k8.winrm.retry_delay = 10
+    win2k8.winrm.port = 5988
+    win2k8.winrm.guest_port = 5988
 
-    win2k8.vm.network "private_network", type: "dhcp"
-
+    # win2k8.vm.network "private_network", type: "dhcp"
+    win2k8.vm.network :forwarded_port, guest: 5988, host: 5988,
+      id: "winrm",
+      auto_correct: false
     win2k8.vm.provider "libvirt" do |v|
-      v.memory = 4096
-      v.cpus = 2
+      v.memory = 8192
+      v.cpus = 12
       v.video_type = 'qxl'
       v.input :type => "tablet", :bus => "usb"
       v.channel :type => 'unix', :target_name => 'org.qemu.guest_agent.0', :target_type => 'virtio'
@@ -37,10 +41,10 @@ Vagrant.configure("2") do |config|
       v.graphics_type = "spice"
 
       # Enable Hyper-V enlightenments: https://blog.wikichoon.com/2014/07/enabling-hyper-v-enlightenments-with-kvm.html
-      v.hyperv_feature :name => 'stimer',  :state => 'on'
+      # v.hyperv_feature :name => 'stimer',  :state => 'on'
       v.hyperv_feature :name => 'relaxed', :state => 'on'
       v.hyperv_feature :name => 'vapic',   :state => 'on'
-      v.hyperv_feature :name => 'synic',   :state => 'on'
+      # v.hyperv_feature :name => 'synic',   :state => 'on'
     end
 
     # Configure Firewall to open up vulnerable services

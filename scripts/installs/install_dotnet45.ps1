@@ -8,7 +8,7 @@ function LogWrite {
  
 LogWrite "Starting installation process..."
 try {
-    Start-Process -FilePath "C:\vagrant\resources\windows_pre_downloads\dotnet.exe" -ArgumentList "/I /q /norestart" -Wait -PassThru
+    Start-Process -FilePath "C:\king\resources\windows_pre_downloads\dotnet.exe" -ArgumentList "/I /q /norestart" -Wait -PassThru
 } catch {
     LogWrite $_.Exception | Format-List -force
     LogWrite "Exception during install process."

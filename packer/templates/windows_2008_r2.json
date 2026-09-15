@@ -1,16 +1,95 @@
 {
   "builders": [
     {
+      "type": "proxmox-iso",
+      "proxmox_url": "{{user `proxmox_url`}}",
+      "username": "{{user `proxmox_username`}}",
+      "token": "{{user `proxmox_token`}}",
+      "insecure_skip_tls_verify": true,
+
+      "node": "{{user `proxmox_node`}}",
+      "vm_name": "metasploitable3-win2k8",
+      "vm_id": "{{user `proxmox_vmid`}}",
+
+      "iso_file": "local:iso/win2k8.iso",
+      "unmount_iso": true,
+
+      "os": "w2k8",
+      "cores": 8,
+      "sockets": 1,
+      "memory": 4096,
+      "qemu_agent": true,
+      
+      "scsi_controller": "lsi",
+      "disks": [
+        {
+          "disk_size": "60G",
+          "storage_pool": "lvm-thin-pool-Storage",
+          "type": "ide"
+        }
+      ],
+
+      "network_adapters": [
+        {
+          "model": "e1000",
+          "bridge": "net1"
+        }
+      ],
+
+      "additional_iso_files": [
+        {
+          "type": "sata",
+          "iso_storage_pool": "local",
+          "unmount": true,
+          "cd_files": [
+            "{{user `autounattend`}}",
+            "{{user `scripts_dir`}}/configs/microsoft-updates.bat",
+            "{{user `scripts_dir`}}/configs/win-updates.ps1",
+            "{{user `scripts_dir`}}/installs/openssh.ps1",
+            "{{user `resources_dir`}}/certs/oracle-cert.cer",
+            "{{user `resources_dir`}}/certs/gdig2.crt",
+            "{{user `resources_dir`}}/certs/comodorsadomainvalidationsecureserverca.crt",
+            "{{user `resources_dir`}}/certs/comodorsacertificationauthority.crt",
+            "{{user `resources_dir`}}/certs/addtrust_external_ca.cer",
+            "{{user `resources_dir`}}/certs/baltimore_ca.cer",
+            "{{user `resources_dir`}}/certs/digicert.cer",
+            "{{user `resources_dir`}}/certs/equifax.cer",
+            "{{user `resources_dir`}}/certs/globalsign.cer",
+            "{{user `resources_dir`}}/certs/gte_cybertrust.cer",
+            "{{user `resources_dir`}}/certs/microsoft_root_2011.cer",
+            "{{user `resources_dir`}}/certs/thawte_primary_root.cer",
+            "{{user `resources_dir`}}/certs/utn-userfirst.cer"
+          ],
+          "cd_label": "cidata"
+        },
+        {
+          "type": "sata",
+          "iso_file": "local:iso/virtio-win-0.1.137.iso",
+          "unmount": true
+        }
+      ],
+
+      "boot_wait": "10m",
+      "communicator": "ssh",
+      "ssh_username": "king",
+      "ssh_password": "king",
+      "ssh_timeout": "2h",
+      "ssh_port": 2222,
+      "ssh_host": "10.172.0.40"
+
+    },
+    {
       "type": "parallels-iso",
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum": "{{user `iso_checksum`}}",
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
-      "ssh_timeout": "2h",
+      "ssh_username": "king",
+      "ssh_password": "king",
+      "ssh_timeout": "10m",
+      "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
-      "guest_os_type": "win-2008",
+      "guest_os_type": "w2k8",
       "parallels_tools_flavor": "win",
       "disk_size": 61440,
       "floppy_files": [
@@ -33,7 +112,7 @@
         "{{user `resources_dir`}}/certs/utn-userfirst.cer"
       ],
       "vm_name": "metasploitable3-win2k8",
-      "cpus": 2,
+      "cpus": 4,
       "memory": 4096
     },
     {
@@ -43,9 +122,10 @@
       "headless": false,
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
+      "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "windows7srv-64",
       "disk_size": 61440,
@@ -72,7 +152,7 @@
       "vmx_data": {
         "cpuid.coresPerSocket": "2",
         "memsize": "4096",
-        "numvcpus": "2",
+        "numvcpus": "12",
         "scsi0.virtualDev": "lsisas1068"
       }
     },
@@ -83,9 +163,10 @@
       "headless": false,
       "boot_wait": "10m",
       "communicator": "ssh",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
+      "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "Windows2008_64",
       "disk_size": 61440,
@@ -120,7 +201,7 @@
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "2"
+          "12"
         ]
       ]
     },
@@ -132,9 +213,10 @@
       "boot_wait": "10m",
       "communicator": "ssh",
       "accelerator": "kvm",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "king",
+      "ssh_password": "king",
       "ssh_timeout": "2h",
+      "ssh_port": 2222,
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "disk_size": 61440,
       "format": "qcow2",
@@ -166,7 +248,7 @@
         ],
         [
           "-smp",
-          "2"
+          "12"
         ],
         [
           "-display",
@@ -189,12 +271,12 @@
     {
       "type": "file",
       "source": "{{user `scripts_dir`}}",
-      "destination": "C:/vagrant"
+      "destination": "C:/king"
     },
     {
       "type": "file",
       "source": "{{user `resources_dir`}}",
-      "destination": "C:/vagrant"
+      "destination": "C:/king"
     },
     {
       "type": "shell",
@@ -214,7 +296,9 @@
       ]
     },
     {
-      "type": "windows-restart"
+     "type": "windows-restart",
+     "restart_timeout": "2m",
+     "pause_before": "1m"
     },
     {
       "type": "powershell",
@@ -249,7 +333,7 @@
     {
       "type": "powershell",
       "elevated_user": "Administrator",
-      "elevated_password": "vagrant",
+      "elevated_password": "king",
       "scripts": [
         "{{user `scripts_dir`}}/installs/setup_iis.bat",
         "{{user `scripts_dir`}}/installs/setup_snmp.bat"
@@ -271,7 +355,9 @@
       ]
     },
     {
-      "type": "windows-restart"
+      "type": "windows-restart",
+      "pause_before": "180s",
+      "restart_timeout": "15m"
     },
     {
       "type": "windows-shell",
@@ -287,10 +373,15 @@
         "{{user `scripts_dir`}}/installs/install_wamp.bat",
         "{{user `scripts_dir`}}/installs/start_wamp.bat",
         "{{user `scripts_dir`}}/installs/install_wordpress.bat",
-        "{{user `scripts_dir`}}/installs/install_openjdk6.bat",
         "{{user `scripts_dir`}}/installs/setup_jmx.bat",
-        "{{user `scripts_dir`}}/chocolatey_installs/ruby.bat",
-        "{{user `scripts_dir`}}/installs/install_devkit.bat"
+        "{{user `scripts_dir`}}/chocolatey_installs/ruby.bat"
+      ]
+    },
+    { 
+      "type": "powershell",
+      "scripts": [
+        "{{user `scripts_dir`}}/installs/install_openjdk6.ps1",
+        "{{user `scripts_dir`}}/installs/install_devkit.ps1"
       ]
     },
     {
@@ -306,12 +397,17 @@
         "{{user `scripts_dir`}}/installs/install_rails_service.bat",
         "{{user `scripts_dir`}}/installs/setup_webdav.bat",
         "{{user `scripts_dir`}}/installs/setup_mysql.bat",
-        "{{user `scripts_dir`}}/installs/install_manageengine.bat",
-        "{{user `scripts_dir`}}/installs/setup_axis2.bat",
         "{{user `scripts_dir`}}/installs/install_backdoors.bat",
         "{{user `scripts_dir`}}/configs/configure_firewall.bat",
-        "{{user `scripts_dir`}}/installs/install_elasticsearch.bat",
         "{{user `scripts_dir`}}/installs/install_flags.bat"
+      ]
+    },
+    { 
+      "type": "powershell",
+      "scripts": [
+        "{{user `scripts_dir`}}/installs/install_manageengine.ps1",
+        "{{user `scripts_dir`}}/installs/setup_axis2.ps1",
+        "{{user `scripts_dir`}}/installs/install_elasticsearch.ps1"
       ]
     },
     {
@@ -358,17 +454,20 @@
   "post-processors": [
     {
       "type": "vagrant",
+      "only": ["vmware-iso", "virtualbox-iso", "parallels-iso", "qemu"],
       "keep_input_artifact": false,
       "output": "{{template_dir}}/../builds/windows_2008_r2_{{.Provider}}_{{user `box_version`}}.box",
       "vagrantfile_template": "{{template_dir}}/vagrantfile-windows_2008_r2.template"
     }
   ],
   "variables": {
+
     "iso_url": "https://download.microsoft.com/download/4/1/D/41DEA7E0-B30D-4012-A1E3-F24DC03BA1BB/7601.17514.101119-1850_x64fre_server_eval_en-us-GRMSXEVAL_EN_DVD.iso",
     "iso_checksum": "4263be2cf3c59177c45085c0a7bc6ca5",
     "autounattend": "{{template_dir}}/../answer_files/2008_r2/Autounattend.xml",
     "scripts_dir": "{{template_dir}}/../../scripts",
     "resources_dir": "{{template_dir}}/../../resources",
-    "box_version": "0.1.0"
+    "box_version": "0.1.1"
+
   }
 }

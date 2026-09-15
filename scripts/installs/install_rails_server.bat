@@ -2,7 +2,7 @@ cmd /C echo :ssl_verify_mode: 0 > .gemrc
 cmd /C gem update --system 3.2.10
 cmd /C rm .gemrc
 
-copy /Y C:\Vagrant\resources\rails_server\gemrc C:\Users\vagrant\.gemrc
+copy /Y C:\king\resources\rails_server\gemrc C:\Users\king\.gemrc
 
 cmd /C "C:\tools\ruby23\bin\gem.cmd install bundler -v '1.17.3' --no-document"
 cmd /C "C:\tools\ruby23\bin\gem.cmd install rails -v '4.1.1' --no-document"
@@ -31,6 +31,6 @@ cmd /C C:\tools\ruby23\bin\gem.cmd install binding_of_caller -v '0.7.2' --no-doc
 cmd /C C:\tools\ruby23\bin\gem.cmd install web-console -v '2.1.2' --no-document
 cmd /C C:\tools\ruby23\bin\gem.cmd install minitest -v '5.9.1' --no-document
 
-copy /Y C:\Vagrant\Resources\rails_server\sqlite3-1.3.11-x64-mingw32.gemspec C:\tools\ruby23\lib\ruby\gems\2.3.0\specifications
+copy /Y C:\king\Resources\rails_server\sqlite3-1.3.11-x64-mingw32.gemspec C:\tools\ruby23\lib\ruby\gems\2.3.0\specifications
 C:\tools\ruby23\bin\rails.bat _4.1.1_ new "C:\Program Files\Rails_Server"
 
