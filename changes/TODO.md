@@ -5,9 +5,9 @@ Speed of packer ->
 # Add more services like this 
 
 - enable samba 
-- enable mtfs 
-- 
-- domain controller
+- enable mtfs  ???
+
+- domain controller 
 - desktop workstation
 - active directory 
 - kerberos thing
@@ -34,9 +34,14 @@ Speed of packer ->
 
 # TODO !!!
 packer load initial stuff the build and then it works on its own 
-Test which user does packer take 
+
+![hey](img/SMB.png)
 
 # Notes
-
 Automation is not a must
 Can be done by hand in the VM
+
+# Plan 
+
+first create initial boot via packer. Potem pa manually dodajat featurje
+Side Thing customize the king_reader file to se who is the king

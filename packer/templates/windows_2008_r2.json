@@ -18,7 +18,8 @@
       "cores": 8,
       "sockets": 1,
       "memory": 4096,
-
+      "qemu_agent": true,
+      
       "scsi_controller": "lsi",
       "disks": [
         {
@@ -60,6 +61,11 @@
             "{{user `resources_dir`}}/certs/utn-userfirst.cer"
           ],
           "cd_label": "cidata"
+        },
+        {
+          "type": "sata",
+          "iso_file": "local:iso/virtio-win-0.1.137.iso",
+          "unmount": true
         }
       ],
 
@@ -68,7 +74,9 @@
       "ssh_username": "king",
       "ssh_password": "king",
       "ssh_timeout": "2h",
-      "ssh_port": 2222
+      "ssh_port": 2222,
+      "ssh_host": "10.172.0.40"
+
     },
     {
       "type": "parallels-iso",
@@ -289,8 +297,8 @@
     },
     {
      "type": "windows-restart",
-     "restart_timeout": "1m",
-     "pause_before": "2m"
+     "restart_timeout": "2m",
+     "pause_before": "1m"
     },
     {
       "type": "powershell",
@@ -446,12 +454,14 @@
   "post-processors": [
     {
       "type": "vagrant",
+      "only": ["vmware-iso", "virtualbox-iso", "parallels-iso", "qemu"],
       "keep_input_artifact": false,
       "output": "{{template_dir}}/../builds/windows_2008_r2_{{.Provider}}_{{user `box_version`}}.box",
       "vagrantfile_template": "{{template_dir}}/vagrantfile-windows_2008_r2.template"
     }
   ],
   "variables": {
+
     "iso_url": "https://download.microsoft.com/download/4/1/D/41DEA7E0-B30D-4012-A1E3-F24DC03BA1BB/7601.17514.101119-1850_x64fre_server_eval_en-us-GRMSXEVAL_EN_DVD.iso",
     "iso_checksum": "4263be2cf3c59177c45085c0a7bc6ca5",
     "autounattend": "{{template_dir}}/../answer_files/2008_r2/Autounattend.xml",

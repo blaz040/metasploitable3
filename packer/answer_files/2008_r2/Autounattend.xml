@@ -267,6 +267,34 @@
                     <Description>Create directory for king files to avoid provisioner bug with packer.</Description>
                     <Order>27</Order>
                 </SynchronousCommand>
+                <!-- Remove confirmation about driver installs  -->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c bcdedit /set nointegritychecks on</CommandLine>
+                    <Description>Disable driver signature enforcement</Description>
+                    <Order>28</Order>
+                </SynchronousCommand>
+                <!-- Driver installs for qemu -->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c for %d in (D E F G H) do if exist %d:\vioserial pnputil -i -a %d:\vioserial\2k8R2\amd64\vioser.inf</CommandLine>
+                    <Description>Install VirtIO Serial Driver</Description>
+                    <Order>40</Order>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c for %d in (D E F G H) do if exist %d:\Balloon pnputil -i -a %d:\Balloon\2k8R2\amd64\balloon.inf</CommandLine>
+                    <Description>Install VirtIO Balloon Driver</Description>
+                    <Order>41</Order>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c for %d in (D E F G H) do if exist %d:\NetKVM pnputil -i -a %d:\NetKVM\2k8R2\amd64\netkvm.inf</CommandLine>
+                    <Description>Install VirtIO Network Driver</Description>
+                    <Order>42</Order>
+                </SynchronousCommand>
+                <!-- Install qemu agent -->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c msiexec /i F:\guest-agent\qemu-ga-x86.msi /qn</CommandLine>
+                    <Description>Install QEMU Guest Agent</Description>
+                    <Order>43</Order>
+                </SynchronousCommand>
                  <!--WITHOUT WINDOWS UPDATES -->
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File E:\openssh.ps1 -AutoStart</CommandLine>
@@ -293,6 +321,36 @@
         </component>
     </settings>
     <settings pass="specialize">
+        <component name="Microsoft-Windows-TCPIP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+            <Interfaces>
+                <Interface wcm:action="add">
+                    <Ipv4Settings>
+                        <DhcpEnabled>false</DhcpEnabled>
+                    </Ipv4Settings>
+                    <Identifier>Local Area Connection</Identifier>
+                    <UnicastIpAddresses>
+                        <IpAddress wcm:action="add" wcm:keyValue="1">10.172.0.40/28</IpAddress>
+                    </UnicastIpAddresses>
+                    <Routes>
+                        <Route wcm:action="add">
+                            <Identifier>1</Identifier>
+                            <Prefix>0.0.0.0/0</Prefix>
+                            <NextHopAddress>10.172.0.1</NextHopAddress>
+                        </Route>
+                    </Routes>
+                </Interface>
+            </Interfaces>
+        </component>
+        <component name="Microsoft-Windows-DNS-Client" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+            <Interfaces>
+                <Interface wcm:action="add">
+                    <DNSServerSearchOrder>
+                        <IpAddress wcm:action="add" wcm:keyValue="1">8.8.8.8</IpAddress>
+                    </DNSServerSearchOrder>
+                    <Identifier>Local Area Connection</Identifier>
+                </Interface>
+            </Interfaces>
+        </component>
         <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
             <OEMInformation>
                 <HelpCustomized>false</HelpCustomized>
