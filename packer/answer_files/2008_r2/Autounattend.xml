@@ -267,35 +267,8 @@
                     <Description>Create directory for king files to avoid provisioner bug with packer.</Description>
                     <Order>27</Order>
                 </SynchronousCommand>
-                <!-- Remove confirmation about driver installs  -->
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c bcdedit /set nointegritychecks on</CommandLine>
-                    <Description>Disable driver signature enforcement</Description>
-                    <Order>28</Order>
-                </SynchronousCommand>
-                <!-- Driver installs for qemu -->
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c for %d in (D E F G H) do if exist %d:\vioserial pnputil -i -a %d:\vioserial\2k8R2\amd64\vioser.inf</CommandLine>
-                    <Description>Install VirtIO Serial Driver</Description>
-                    <Order>40</Order>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c for %d in (D E F G H) do if exist %d:\Balloon pnputil -i -a %d:\Balloon\2k8R2\amd64\balloon.inf</CommandLine>
-                    <Description>Install VirtIO Balloon Driver</Description>
-                    <Order>41</Order>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c for %d in (D E F G H) do if exist %d:\NetKVM pnputil -i -a %d:\NetKVM\2k8R2\amd64\netkvm.inf</CommandLine>
-                    <Description>Install VirtIO Network Driver</Description>
-                    <Order>42</Order>
-                </SynchronousCommand>
-                <!-- Install qemu agent -->
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c msiexec /i F:\guest-agent\qemu-ga-x86.msi /qn</CommandLine>
-                    <Description>Install QEMU Guest Agent</Description>
-                    <Order>43</Order>
-                </SynchronousCommand>
-                 <!--WITHOUT WINDOWS UPDATES -->
+                
+                <!--WITHOUT WINDOWS UPDATES -->
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File E:\openssh.ps1 -AutoStart</CommandLine>
                     <Description>Install OpenSSH</Description>

@@ -13,31 +13,31 @@ boot iso options in a 'boot_iso' block
 
 [1;32m==> proxmox-iso: Creating CD disk...[0m
 [1;32m==> proxmox-iso: xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.[0m
-[1;32m==> proxmox-iso: Drive current: -outdev 'stdio:/tmp/packer1805650102.iso'[0m
+[1;32m==> proxmox-iso: Drive current: -outdev 'stdio:/tmp/packer3731008853.iso'[0m
 [1;32m==> proxmox-iso: Media current: stdio file, overwriteable[0m
 [1;32m==> proxmox-iso: Media status : is blank[0m
 [1;32m==> proxmox-iso: Media summary: 0 sessions, 0 data blocks, 0 data, 15.1g free[0m
 [1;32m==> proxmox-iso: xorriso : WARNING : -volid text does not comply to ISO 9660 / ECMA 119 rules[0m
-[1;32m==> proxmox-iso: Added to ISO image: directory '/'='/tmp/packer_to_cdrom4212280186'[0m
+[1;32m==> proxmox-iso: Added to ISO image: directory '/'='/tmp/packer_to_cdrom1790046804'[0m
 [1;32m==> proxmox-iso: xorriso : UPDATE :      17 files added in 1 seconds[0m
 [1;32m==> proxmox-iso: xorriso : UPDATE :      17 files added in 1 seconds[0m
-[1;32m==> proxmox-iso: ISO image produced: 219 sectors[0m
-[1;32m==> proxmox-iso: Written to medium : 219 sectors at LBA 0[0m
-[1;32m==> proxmox-iso: Writing to 'stdio:/tmp/packer1805650102.iso' completed successfully.[0m
+[1;32m==> proxmox-iso: ISO image produced: 218 sectors[0m
+[1;32m==> proxmox-iso: Written to medium : 218 sectors at LBA 0[0m
+[1;32m==> proxmox-iso: Writing to 'stdio:/tmp/packer3731008853.iso' completed successfully.[0m
 [1;32m==> proxmox-iso: Done copying paths from CD_dirs[0m
-[1;32m==> proxmox-iso: Uploaded ISO to local:iso/packer1805650102.iso[0m
+[1;32m==> proxmox-iso: Uploaded ISO to local:iso/packer3731008853.iso[0m
 [1;32m==> proxmox-iso: Creating VM[0m
 [1;32m==> proxmox-iso: Starting VM[0m
 [1;32m==> proxmox-iso: Using SSH communicator to connect: 10.172.0.40[0m
 [1;32m==> proxmox-iso: Waiting for SSH to become available...[0m
 [1;32m==> proxmox-iso: Connected to SSH![0m
-[1;32m==> proxmox-iso: Running local shell script: /tmp/packer-shell3995456793[0m
+[1;32m==> proxmox-iso: Running local shell script: /tmp/packer-shell2026754152[0m
 [1;31m==> proxmox-iso:   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current[0m
 [1;31m==> proxmox-iso:                                  Dload  Upload  Total   Spent   Left   Speed[0m
-[1;31m==> proxmox-iso: 100 66.75M 100 66.75M   0      0 22.95M      0   00:02   00:02         22.37M[0m
+[1;31m==> proxmox-iso: 100 66.75M 100 66.75M   0      0 19.98M      0   00:03   00:03         19.77M[0m
 [1;31m==> proxmox-iso:   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current[0m
 [1;31m==> proxmox-iso:                                  Dload  Upload  Total   Spent   Left   Speed[0m
-[1;31m==> proxmox-iso: 100 64.92M 100 64.92M   0      0 22.95M      0   00:02   00:02         21.92M[0m
+[1;31m==> proxmox-iso: 100 64.92M 100 64.92M   0      0 19.69M      0   00:03   00:03         19.27M[0m
 [1;32m==> proxmox-iso: Skipping shell-local due to runtime OS[0m
 [1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../scripts => C:/king[0m
 [1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../resources => C:/king[0m
@@ -149,6 +149,9 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso: Restarting Machine[0m
 [1;32m==> proxmox-iso: Waiting for machine to restart...[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
+[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
+[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
+[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
@@ -187,7 +190,7 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName[0m
 [1;32m==> proxmox-iso: -------  ------    -----      ----- -----   ------     -- -----------[0m
-[1;32m==> proxmox-iso:       9       5      876       2272    30     0.00   1520 dotnet[0m
+[1;32m==> proxmox-iso:       4       2      328        556     6     0.02   1876 dotnet[0m
 [1;32m==> proxmox-iso: Restarting Machine[0m
 [1;32m==> proxmox-iso: Waiting for machine to restart...[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
@@ -199,12 +202,7 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
+[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
@@ -237,7 +235,7 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: Mode                LastWriteTime     Length Name[0m
 [1;32m==> proxmox-iso: ----                -------------     ------ ----[0m
-[1;32m==> proxmox-iso: d----         9/15/2026  12:37 AM            wmf_install[0m
+[1;32m==> proxmox-iso: d----         9/15/2026  11:15 AM            wmf_install[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: Drive        : C[0m
 [1;32m==> proxmox-iso: Provider     : Microsoft.PowerShell.Core\FileSystem[0m
@@ -252,7 +250,7 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: Mode                LastWriteTime     Length Name[0m
 [1;32m==> proxmox-iso: ----                -------------     ------ ----[0m
-[1;32m==> proxmox-iso: -a---         9/15/2026  12:37 AM          0 install_wmf.bat[0m
+[1;32m==> proxmox-iso: -a---         9/15/2026  11:15 AM          0 install_wmf.bat[0m
 [1;31m==> proxmox-iso: WARNING: Task may not run because /ST is earlier than current time.[0m
 [1;32m==> proxmox-iso: SUCCESS: The scheduled task "updatepsh" has successfully been created.[0m
 [1;32m==> proxmox-iso: SUCCESS: Attempted to run the scheduled task "updatepsh".[0m
@@ -377,23 +375,6 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
@@ -421,13 +402,7 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
+[1;31m==> proxmox-iso: /bin/sh: Read-only file system[0m
 [1;31m==> proxmox-iso:  [0m
 [1;31m==> proxmox-iso:  [0m
 [1;31m==> proxmox-iso:  [0m
@@ -453,7 +428,7 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: Mode                LastWriteTime         Length Name[0m
 [1;32m==> proxmox-iso: ----                -------------         ------ ----[0m
-[1;32m==> proxmox-iso: -a----        9/15/2026  12:44 AM              0 Microsoft.PowerShell_profile.p[0m
+[1;32m==> proxmox-iso: -a----        9/15/2026  11:22 AM              0 Microsoft.PowerShell_profile.p[0m
 [1;32m==> proxmox-iso:                                                  s1[0m
 [1;32m==> proxmox-iso: Forcing web requests to allow TLS v1.2 (Required for requests to Chocolatey.org)[0m
 [1;32m==> proxmox-iso: Downloading specific version of Chocolatey: 0.10.13[0m
@@ -503,9 +478,6 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
@@ -749,10 +721,6 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:  - boxstarter.chocolatey v3.0.3[0m
 [1;32m==> proxmox-iso:  - boxstarter.common v3.0.3[0m
 [1;32m==> proxmox-iso:  - boxstarter.hyperv v3.0.3[0m
-[1;32m==> proxmox-iso:[0m
-[1;32m==> proxmox-iso: Enjoy using Chocolatey? Explore more amazing features to take your[0m
-[1;32m==> proxmox-iso: experience to the next level at[0m
-[1;32m==> proxmox-iso:  https://chocolatey.org/compare[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>chocolatey feature disable -n=allowGlobalConfirmation[0m
 [1;32m==> proxmox-iso: Chocolatey v0.10.13[0m
@@ -1041,9 +1009,9 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
+[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
+[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
+[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
@@ -1147,12 +1115,12 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso: [SC] ChangeServiceConfig SUCCESS[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>net start "Apache Tomcat 8.0 Tomcat8"[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\apache_struts\struts2-rest-showcase.war "C:\Program Files\Apache Software Foundation\tomcat\apache-tomcat-8.0.33\webapps"[0m
 [1;31m==> proxmox-iso: The requested service has already been started.[0m
 [1;31m==> proxmox-iso:[0m
 [1;31m==> proxmox-iso: More help is available by typing NET HELPMSG 2182.[0m
 [1;31m==> proxmox-iso:[0m
-[1;32m==> proxmox-iso:[0m
-[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\apache_struts\struts2-rest-showcase.war "C:\Program Files\Apache Software Foundation\tomcat\apache-tomcat-8.0.33\webapps"[0m
 [1;32m==> proxmox-iso:         1 file(s) copied.[0m
 [1;32m==> proxmox-iso: Provisioning with shell script: /home/blaz/metasploitable3/packer/templates/../../scripts/installs/setup_glassfish.bat[0m
 [1;32m==> proxmox-iso:[0m
@@ -7192,18 +7160,6 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
-[1;31m==> proxmox-iso: A system shutdown is in progress.(1115)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
@@ -7266,13 +7222,7 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
 [1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
-[1;31m==> proxmox-iso: The interface is unknown.(1717)[0m
+[1;31m==> proxmox-iso: /bin/sh: Read-only file system[0m
 [1;31m==> proxmox-iso: #< CLIXML[0m
 [1;32m==> proxmox-iso: king-2008R2 restarted.[0m
 [1;31m==> proxmox-iso: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">2</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>[0m
@@ -9121,46 +9071,46 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso: 2 gems installed[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install tzinfo-data -v '1.2016.7' --no-document[0m
-[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
-[1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;32m==> proxmox-iso: Successfully installed tzinfo-data-1.2016.7[0m
+[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
 [1;32m==> proxmox-iso: 1 gem installed[0m
+[1;31m==> proxmox-iso:       json (~> 1.4)[0m
+[1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
+[1;31m==> proxmox-iso:       - 1.8.6[0m
+[1;31m==> proxmox-iso:       - 1.8.3[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install jbuilder -v '2.6.0' --no-document[0m
-[1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
-[1;31m==> proxmox-iso:       - 1.8.6[0m
-[1;31m==> proxmox-iso:       - 1.8.3[0m
 [1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
 [1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
 [1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
-[1;31m==> proxmox-iso:       json (~> 1.4)[0m
-[1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
-[1;31m==> proxmox-iso:       - 1.8.6[0m
-[1;31m==> proxmox-iso:       - 1.8.3[0m
-[1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
-[1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
 [1;32m==> proxmox-iso: Successfully installed jbuilder-2.6.0[0m
 [1;32m==> proxmox-iso: 1 gem installed[0m
+[1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install coffee-rails -v '4.0.1' --no-document[0m
-[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
-[1;32m==> proxmox-iso: Successfully installed coffee-rails-4.0.1[0m
-[1;31m==> proxmox-iso:       json (~> 1.4)[0m
-[1;32m==> proxmox-iso: 1 gem installed[0m
 [1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
 [1;31m==> proxmox-iso:       - 1.8.6[0m
 [1;31m==> proxmox-iso:       - 1.8.3[0m
 [1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
 [1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
+[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
+[1;31m==> proxmox-iso:       json (~> 1.4)[0m
+[1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
+[1;31m==> proxmox-iso:       - 1.8.6[0m
+[1;31m==> proxmox-iso:       - 1.8.3[0m
+[1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
+[1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
+[1;32m==> proxmox-iso: Successfully installed coffee-rails-4.0.1[0m
+[1;32m==> proxmox-iso: 1 gem installed[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install jquery-rails -v '3.1.4' --no-document[0m
 [1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
 [1;31m==> proxmox-iso:       json (~> 1.4)[0m
+[1;32m==> proxmox-iso: Successfully installed jquery-rails-3.1.4[0m
 [1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
+[1;32m==> proxmox-iso: 1 gem installed[0m
 [1;31m==> proxmox-iso:       - 1.8.6[0m
 [1;31m==> proxmox-iso:       - 1.8.3[0m
-[1;32m==> proxmox-iso: Successfully installed jquery-rails-3.1.4[0m
-[1;32m==> proxmox-iso: 1 gem installed[0m
 [1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
 [1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
 [1;32m==> proxmox-iso:[0m
@@ -9178,12 +9128,12 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install debug_inspector -v '0.0.2' --no-document[0m
 [1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
-[1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;32m==> proxmox-iso: Temporarily enhancing PATH to include DevKit...[0m
 [1;32m==> proxmox-iso: Building native extensions. This could take a while...[0m
-[1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
 [1;32m==> proxmox-iso: Successfully installed debug_inspector-0.0.2[0m
+[1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;32m==> proxmox-iso: 1 gem installed[0m
+[1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
 [1;31m==> proxmox-iso:       - 1.8.6[0m
 [1;31m==> proxmox-iso:       - 1.8.3[0m
 [1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
@@ -9191,13 +9141,13 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install binding_of_caller -v '0.7.2' --no-document[0m
 [1;32m==> proxmox-iso: Temporarily enhancing PATH to include DevKit...[0m
-[1;32m==> proxmox-iso: Building native extensions. This could take a while...[0m
 [1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
-[1;32m==> proxmox-iso: Successfully installed binding_of_caller-0.7.2[0m
-[1;32m==> proxmox-iso: 1 gem installed[0m
 [1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
+[1;32m==> proxmox-iso: Building native extensions. This could take a while...[0m
 [1;31m==> proxmox-iso:       - 1.8.6[0m
+[1;32m==> proxmox-iso: Successfully installed binding_of_caller-0.7.2[0m
+[1;32m==> proxmox-iso: 1 gem installed[0m
 [1;31m==> proxmox-iso:       - 1.8.3[0m
 [1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
 [1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
@@ -9206,33 +9156,33 @@ boot iso options in a 'boot_iso' block
 [1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
 [1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
+[1;31m==> proxmox-iso:       - 1.8.6[0m
+[1;31m==> proxmox-iso:       - 1.8.3[0m
+[1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
+[1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
 [1;32m==> proxmox-iso: Successfully installed web-console-2.1.2[0m
 [1;32m==> proxmox-iso: 1 gem installed[0m
-[1;31m==> proxmox-iso:       - 1.8.6[0m
-[1;31m==> proxmox-iso:       - 1.8.3[0m
-[1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
-[1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cmd /C C:\tools\ruby23\bin\gem.cmd install minitest -v '5.9.1' --no-document[0m
+[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
 [1;32m==> proxmox-iso: Successfully installed minitest-5.9.1[0m
 [1;32m==> proxmox-iso: 1 gem installed[0m
-[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
+[1;32m==> proxmox-iso:[0m
 [1;31m==> proxmox-iso:       json (~> 1.4)[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy /Y C:\king\Resources\rails_server\sqlite3-1.3.11-x64-mingw32.gemspec C:\tools\ruby23\lib\ruby\gems\2.3.0\specifications[0m
 [1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
 [1;31m==> proxmox-iso:       - 1.8.6[0m
 [1;31m==> proxmox-iso:       - 1.8.3[0m
+[1;32m==> proxmox-iso:[0m
 [1;31m==> proxmox-iso: WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'[0m
-[1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
-[1;32m==> proxmox-iso:[0m
-[1;32m==> proxmox-iso: C:\Users\king>copy /Y C:\king\Resources\rails_server\sqlite3-1.3.11-x64-mingw32.gemspec C:\tools\ruby23\lib\ruby\gems\2.3.0\specifications[0m
-[1;32m==> proxmox-iso:         1 file(s) copied.[0m
-[1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>C:\tools\ruby23\bin\rails.bat _4.1.1_ new "C:\Program Files\Rails_Server"[0m
+[1;31m==> proxmox-iso: Please report a bug if this causes problems.[0m
 [1;31m==> proxmox-iso: Deprecation warning: Expected string default value for '--rc'; got false (boolean).[0m
-[1;31m==> proxmox-iso: This will be rejected in the future unless you explicitly pass the options `check_default_type: false` or call `allow_incompatible_default_type!` in your code[0m
-[1;31m==> proxmox-iso: You can silence deprecations warning by setting the environment variable THOR_SILENCE_DEPRECATION.[0m
 [1;32m==> proxmox-iso:       create[0m
 [1;32m==> proxmox-iso:       create  README.rdoc[0m
+[1;31m==> proxmox-iso: This will be rejected in the future unless you explicitly pass the options `check_default_type: false` or call `allow_incompatible_default_type!` in your code[0m
+[1;31m==> proxmox-iso: You can silence deprecations warning by setting the environment variable THOR_SILENCE_DEPRECATION.[0m
 [1;32m==> proxmox-iso:       create  Rakefile[0m
 [1;32m==> proxmox-iso:       create  config.ru[0m
 [1;32m==> proxmox-iso:       create  .gitignore[0m
@@ -9330,9 +9280,9 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso: C:\Users\king>cd "C:\Program Files\Rails_Server"[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Program Files\Rails_Server>gem install bundler -v '1.17.3' --no-document[0m
+[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
 [1;32m==> proxmox-iso: Successfully installed bundler-1.17.3[0m
 [1;32m==> proxmox-iso: 1 gem installed[0m
-[1;31m==> proxmox-iso: WARN: Unresolved or ambiguous specs during Gem::Specification.reset:[0m
 [1;31m==> proxmox-iso:       json (~> 1.4)[0m
 [1;31m==> proxmox-iso:       Available/installed versions of this gem:[0m
 [1;31m==> proxmox-iso:       - 1.8.6[0m
@@ -9379,7 +9329,7 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>net start wampmysqld[0m
-[1;32m==> proxmox-iso: The wampmysqld service is starting.[0m
+[1;32m==> proxmox-iso: The wampmysqld service is starting..[0m
 [1;32m==> proxmox-iso: The wampmysqld service was started successfully.[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: Provisioning with shell script: /home/blaz/metasploitable3/packer/templates/../../scripts/installs/install_backdoors.bat[0m
@@ -9490,3 +9440,109 @@ boot iso options in a 'boot_iso' block
 [1;32m==> proxmox-iso: C:\Users\king>attrib +h "C:\Windows\three_of_spades.png"[0m
 [1;32m==> proxmox-iso:[0m
 [1;32m==> proxmox-iso: C:\Users\king>cacls "C:\Windows\three_of_spades.png" /t /e /g SYSTEM:f[0m
+[1;32m==> proxmox-iso: processed file: C:\Windows\three_of_spades.png[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>cacls "C:\Windows\three_of_spades.png" /R Administrators /E[0m
+[1;32m==> proxmox-iso: processed file: C:\Windows\three_of_spades.png[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>cacls "C:\Windows\three_of_spades.png" /R USERS /E[0m
+[1;32m==> proxmox-iso: processed file: C:\Windows\three_of_spades.png[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\kingofclubs.exe C:\Windows\System32[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\four_of_clubs.wav C:\Users\Public\Music[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\joker.html C:\inetpub\wwwroot\index.html[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\hahaha.jpg C:\inetpub\wwwroot[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>del C:\inetpub\wwwroot\iisstart.htm[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\seven_of_hearts.html C:\inetpub\wwwroot[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\jack_of_hearts.docx C:\Users\Public\Documents[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\seven_of_spades.pdf C:\Users\Public\Documents[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\ace_of_hearts.jpg C:\Users\Public\Pictures[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>copy C:\king\resources\flags\ten_of_diamonds.png C:\Users\Public\Pictures[0m
+[1;32m==> proxmox-iso:         1 file(s) copied.[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>cd C:\[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\>type C:\king\resources\flags\jack_of_diamonds.b64  1>jack_of_diamonds.png:jack_of_diamonds.txt[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\>cmd /c ""C:\wamp\bin\mysql\mysql5.5.20\bin\mysql.exe" -u root --password=""  -e "create database cards;""[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\>cmd /c ""C:\wamp\bin\mysql\mysql5.5.20\bin\mysql.exe" -u root --password=""  cards < "C:\king\resources\flags\queen_of_hearts.sql""[0m
+[1;32m==> proxmox-iso: Provisioning with Powershell...[0m
+[1;32m==> proxmox-iso: Provisioning with powershell script: /home/blaz/metasploitable3/packer/templates/../../scripts/installs/install_manageengine.ps1[0m
+[1;32m==> proxmox-iso: Provisioning with powershell script: /home/blaz/metasploitable3/packer/templates/../../scripts/installs/setup_axis2.ps1[0m
+[1;32m==> proxmox-iso: Provisioning with powershell script: /home/blaz/metasploitable3/packer/templates/../../scripts/installs/install_elasticsearch.ps1[0m
+[1;32m==> proxmox-iso: Installing service      :  "elasticsearch-service-x64"[0m
+[1;32m==> proxmox-iso: Using JAVA_HOME (64-bit):  "C:\Program Files\Java\jdk1.8.0_211"[0m
+[1;32m==> proxmox-iso: The service 'elasticsearch-service-x64' has been installed.[0m
+[1;32m==> proxmox-iso: [SC] ChangeServiceConfig SUCCESS[0m
+[1;32m==> proxmox-iso: The service 'elasticsearch-service-x64' has been started[0m
+[1;32m==> proxmox-iso: Provisioning with shell script: /home/blaz/metasploitable3/packer/templates/../../scripts/installs/vm-guest-tools.bat[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>if not exist "C:\Program Files\7-Zip\7z.exe" ([0m
+[1;32m==> proxmox-iso: powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1604-x64.msi', 'C:\Windows\Temp\7zInstaller-x64.msi')"  0<NUL[0m
+[1;32m==> proxmox-iso:  msiexec /qb /i C:\Windows\Temp\7zInstaller-x64.msi[0m
+[1;32m==> proxmox-iso: )[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>if "proxmox-iso" EQU "vmware-iso" goto :vmware[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>if "proxmox-iso" EQU "virtualbox-iso" goto :virtualbox[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>if "proxmox-iso" EQU "parallels-iso" goto :parallels[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>goto :done[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>if exist "C:\Windows\Temp\7zInstaller-x64.msi" (msiexec /qb /x C:\Windows\Temp\7zInstaller-x64.msi )[0m
+[1;32m==> proxmox-iso: Provisioning with shell script: /home/blaz/metasploitable3/packer/templates/../../scripts/configs/packer_cleanup.bat[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: C:\Users\king>rmdir /S /Q C:\king[0m
+[1;32m==> proxmox-iso: Provisioning with Powershell...[0m
+[1;32m==> proxmox-iso: Provisioning with powershell script: /tmp/powershell-provisioner866263421[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso:     Directory: C:\[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso:[0m
+[1;32m==> proxmox-iso: Mode                LastWriteTime         Length Name[0m
+[1;32m==> proxmox-iso: ----                -------------         ------ ----[0m
+[1;32m==> proxmox-iso: d-----        9/15/2026  11:52 AM                startup[0m
+[1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../scripts/configs/disable_firewall.bat => C:/startup/disable_firewall.bat[0m
+[0;32m    proxmox-iso: disable_firewall.bat[0m 44 B / 44 B [======================================================] 100.00%
+[1A[0;32m    proxmox-iso: disable_firewall.bat[0m 44 B / 44 B [===================================================] 100.00% 0s
+[1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../scripts/configs/enable_firewall.bat => C:/startup/enable_firewall.bat[0m
+[0;32m    proxmox-iso: enable_firewall.bat[0m 42 B / 42 B [=======================================================] 100.00%
+[1A[0;32m    proxmox-iso: enable_firewall.bat[0m 42 B / 42 B [====================================================] 100.00% 0s
+[1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../scripts/configs/configure_firewall.bat => C:/startup/configure_firewall.bat[0m
+[0;32m    proxmox-iso: configure_firewall.bat[0m 2.23 KiB / 2.23 KiB [============================================] 100.00%
+[1A[0;32m    proxmox-iso: configure_firewall.bat[0m 2.23 KiB / 2.23 KiB [=========================================] 100.00% 0s
+[1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../scripts/installs/install_share_autorun.bat => C:/startup/install_share_autorun.bat[0m
+[0;32m    proxmox-iso: install_share_autorun.bat[0m 182 B / 182 B [===============================================] 100.00%
+[1A[0;32m    proxmox-iso: install_share_autorun.bat[0m 182 B / 182 B [============================================] 100.00% 0s
+[1;32m==> proxmox-iso: Uploading /home/blaz/metasploitable3/packer/templates/../../scripts/installs/setup_linux_share.bat => C:/startup/setup_linux_share.bat[0m
+[0;32m    proxmox-iso: setup_linux_share.bat[0m 231 B / 231 B [===================================================] 100.00%
+[1A[0;32m    proxmox-iso: setup_linux_share.bat[0m 231 B / 231 B [================================================] 100.00% 0s
+[1;32m==> proxmox-iso: Stopping VM[0m
+[1;32m==> proxmox-iso: Converting VM to template[0m
+[1;32m==> proxmox-iso: Deleted generated ISO from local:iso/packer3731008853.iso[0m
+[1;32mBuild 'proxmox-iso' finished after 56 minutes 26 seconds.[0m
+
+==> Wait completed after 56 minutes 26 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> proxmox-iso: A template was created: 9005
